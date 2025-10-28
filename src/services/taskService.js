@@ -16,7 +16,7 @@ export async function getTaskById(id) {
     throw error;
   }
 
-  const task = await taskRepo.findById(Number(id));
+  const task = await taskRepository.findById(Number(id));
   if (!task) {
     const error = new Error('Task not found');
     error.status = 404;
